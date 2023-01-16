@@ -10,7 +10,7 @@
 ## 개요
 #### - CSP : AWS
 #### - 스프링 오픈 소스를 활용한 3Tier구축
-#### - 고가용성 및 부하분산을 위한 Web, WAS(Web Application Server), DB분리
+#### - 고가용성 및 부하분산을 위한 WEB, WAS(Web Application Server), DB분리
 #### - 보안 및 웹 페이지의 안정성을 위한 세션 클러스터링, Crontab을 활용한 로그 관리, CDN(Content Delivery Network)기능 추가
 
 
@@ -53,7 +53,7 @@
 
 ### Naming rule & Security Group
 ```
-보안 강화를 위한 well-known port변경후, 사용
+보안 강화를 위한 well-known port 변경 후, 사용
 ```
 ![image](https://user-images.githubusercontent.com/84059211/212465497-3889ddff-b421-4b1c-8931-48de66aebf0c.png)
 ![image](https://user-images.githubusercontent.com/84059211/212465556-3d114e6b-c45c-4135-beba-32e43cd1f1bd.png)
