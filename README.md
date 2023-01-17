@@ -66,7 +66,7 @@
 ### Auto Scaling용 WAS 로그 관리
 ![image](https://user-images.githubusercontent.com/84059211/212465673-9fd0118f-8543-4163-988a-b4ebb628e6c4.png)
 
-<br/><br/><br/>
+<br/><br/>
 ***
 
 <div align=center>
