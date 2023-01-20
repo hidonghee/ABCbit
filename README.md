@@ -8,22 +8,31 @@
 <br/>
 
 ## 개요
-#### - CSP : AWS
-#### - 스프링 오픈 소스를 활용한 3Tier구축
-#### - 고가용성 및 부하분산을 위한 WEB, WAS(Web Application Server), DB분리
-#### - 보안 및 웹 페이지의 안정성을 위한 세션 클러스터링, Crontab을 활용한 로그 관리, CDN(Content Delivery Network)기능 추가
+#### - AWS의 서비스를 바탕으로 스프링 오픈 소스를 활용한, 3Tier Architecture구축 프로젝트
+#### - 또한, 보안 및 웹 페이지의 안정성을 위해 세션 클러스터링과 Crontab을 활용한 로그 관리, CDN(Content Delivery Network)을 구현
 
+<br/>
 
 ### 구축 인원 및 기간
 <b> - 기간 : 2022-08-29 ~ 2022-09-16 (총 3주) </b> <br/>
 <b> - 인원 : 5명 (인프라 구축 5명) </b>
 
+<br/>
+
 ### 구축환경
 ```
-1. Notion, Slack, Google( 활용한 협업
-2. AWS의 서비스를 기반으로 터미널 프로그램(MobaXterm, Putty, Xshell)을 이용한 서버 접속, Spring프로젝트 운영 관리
+1. Notion, Slack, Google Tools(Sheets, Slides, Meet, Chat)를 활용한 협업
+2. AWS의 서비스를 기반으로 하여 터미널 프로그램(MobaXterm, Putty, Xshell)을 통해 서버 접속, Spring프로젝트 운영 관리
 ```
 ![image](https://user-images.githubusercontent.com/84059211/212465172-da9c20cc-e6ef-4f57-aff9-c002b8db74fa.png)
+
+<br/>
+
+### 담당 역할
+#### - WEB, WAS, DB의 연결, ALB(Application Load Balancer) 및 Cloud Front, Router53등을 연결하여 아키텍쳐 구축
+#### - 발표자료 생성 및 프로젝트 평가 발표 진행
+
+<br/>
 
 ### 시장 분석
 ```
@@ -32,16 +41,22 @@
 ```
 ![image](https://user-images.githubusercontent.com/84059211/212464910-5fef4c1d-de15-4eb6-9bd9-7d36374e12c0.png)
 
+<br/>
 
 ### 고객 요구사항 및 대응 방안
+```
+보안 강화, 지속적인 모니터링, CDN서비스를 이용한 대량의 트래픽 처리, 자동 로그 관리 등의 요구사항을 바탕으로 프로젝트 진행 
+```
 ![image](https://user-images.githubusercontent.com/84059211/212464883-c92f3f0c-bd87-4922-8d7e-f7a8b5a00e92.png)
 ![image](https://user-images.githubusercontent.com/84059211/212464891-24f99dfe-45d7-4871-8445-09e41cc27152.png)
 
-<br/>
+<br/><br/>
 
 ## 메인 구축 과정
 ### Solution Architecture
 ![image](https://user-images.githubusercontent.com/84059211/212464998-2c844cef-1be6-455d-837b-d77c7e6cd237.png)
+
+<br/>
 
 ### ABCbit Service
 ```
@@ -50,20 +65,34 @@
 ```
 ![image](https://user-images.githubusercontent.com/84059211/212465902-0a649d0d-e2eb-434d-9bd8-ad36b0fb775a.png)
 
+<br/>
 
 ### Naming rule & Security Group
 ```
-보안 강화를 위한 well-known port 변경 후, 사용
+보안 강화를 위한 well-known port 변경
+1. ssh 프로토콜 : 22 -> 22222
+2. DB 포트 : 3306 -> 3333
 ```
 ![image](https://user-images.githubusercontent.com/84059211/212465497-3889ddff-b421-4b1c-8931-48de66aebf0c.png)
 ![image](https://user-images.githubusercontent.com/84059211/212465556-3d114e6b-c45c-4135-beba-32e43cd1f1bd.png)
 ![image](https://user-images.githubusercontent.com/84059211/212465566-1623f325-898a-4f33-801b-848f80f2aa94.png)
 ![image](https://user-images.githubusercontent.com/84059211/212465692-b8a169c7-633e-48a5-947c-7db5452bdc29.png)
 
+<br/>
+
 ### Crontab을 통한 서버 체크 및 로그 관리
+```
+1. 서비스 상태 체크 스크립트 및 로그 관리용 스크립트 작성
+2. 두 스크립트는 Crontab에 설정하여 자동 관리
+```
 ![image](https://user-images.githubusercontent.com/84059211/212465616-41c4504c-d263-4d42-9544-0f6dc6273421.png)
 
+<br/>
+
 ### Auto Scaling용 WAS 로그 관리
+```
+언제 종료될지 알 수 없는 Autoscaling된 서버의 상태를 고려하여, 서버 Shutdown시 로그가 전송되도록 설정
+```
 ![image](https://user-images.githubusercontent.com/84059211/212465673-9fd0118f-8543-4163-988a-b4ebb628e6c4.png)
 
 <br/><br/>
