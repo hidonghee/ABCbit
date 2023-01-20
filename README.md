@@ -29,8 +29,10 @@
 <br/>
 
 ### 담당 역할
-#### - WEB, WAS, DB의 연결, ALB(Application Load Balancer) 및 Cloud Front, Router53등을 연결하여 아키텍쳐 구축
-#### - 발표자료 생성 및 프로젝트 평가 발표 진행
+```
+1. WEB, WAS, DB의 연결, ALB(Application Load Balancer) 및 Cloud Front, Router53등을 연결하여 아키텍쳐 구축
+2. 발표자료 생성 및 프로젝트 평가 발표 진행
+```
 
 <br/>
 
