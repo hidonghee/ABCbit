@@ -20,7 +20,7 @@
 
 ### 구축환경
 ```
-1. Notion, Slack, Google 서비스를 활용한 협업
+1. Notion, Slack, Google( 활용한 협업
 2. AWS의 서비스를 기반으로 터미널 프로그램(MobaXterm, Putty, Xshell)을 이용한 서버 접속, Spring프로젝트 운영 관리
 ```
 ![image](https://user-images.githubusercontent.com/84059211/212465172-da9c20cc-e6ef-4f57-aff9-c002b8db74fa.png)
