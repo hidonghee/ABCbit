@@ -1,4 +1,6 @@
 # 코인거래소 ABCbit 3Tier Architecture 구축
+(🥇First prize) Semi team Project - based on AWS
+└ 고가용성 및 부하분산을 위한 3Tier(WEB, WAS, DB) Architecture 구축 프로젝트
 
 # 목차
 [1. 개요](#개요)
@@ -29,8 +31,9 @@
 <br/>
 
 ### 🙌 담당 역할 🙌
-#### 1. WEB, WAS, DB의 연결, ALB(Application Load Balancer) 및 Cloud Front, Router53등을 연결하여 아키텍쳐 구축
-#### 2. 발표자료 생성 및 프로젝트 평가 발표 진행
+#### 1. 확장성이 존재하는 was서버의 세션 불일치 극복을 위해 Amazon Elasticache를 사용해서 스켈레톤 Spring boot 프로젝트의 소스코드를 수정하여 Session Cluster 구성
+#### 2. 팀에서 정한 로그 관리 기준을 바탕으로 S3 백업을 위한 crontab 구성 및 shell 스크립트 작성
+#### 3. AWS 인프라 리소스 생성 및 관리
 
 
 <br/>
